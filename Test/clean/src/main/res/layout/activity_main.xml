@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Core.Main.view.MainActivity"
+    android:paddingTop="30dp"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_menu_white_24dp"
+                android:textAlignment="center"
+                android:tint="@color/colorDodgetBlue"
+                android:id="@+id/iv_filter_act_main"/>
+
+            <EditText
+                android:id="@+id/et_search_med_act_main"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/search_et_background"
+                android:drawableRight="@drawable/ic_search_white_24dp"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:hint="Busca tu medicamento"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:paddingRight="20dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rl_titulo_act_main">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encontrados"
+                android:textSize="18dp"
+                android:textColor="@color/colorDodgetBlue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:id="@+id/tv_limpiar_act_main"
+                android:text="Limpiar"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorSilverChalice"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorDodgetBlue"
+            android:id="@+id/v_sep_titulo_act_main"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:id="@+id/sv_medicamentos_act_main"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_medicamentos_act_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_central_image_act_main">
+
+            <!--ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/capsule" /-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Busca tu medicamento"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
